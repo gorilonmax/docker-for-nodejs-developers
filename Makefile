@@ -4,8 +4,9 @@ build:
 delete:
 
 run:
-	docker run gorilonmax/docker-for-nodejs-developers
+	docker run
+	docker run -P --name development -v /webapp gorilonmax/docker-for-nodejs-developers python app.py
 stop:
-	docker stop gorilonmax/docker-for-nodejs-developers
+	docker stop development
 terminal:
 	docker exec -i -t /bin/bash
