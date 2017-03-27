@@ -5,10 +5,11 @@ delete:
 	docker rmi gorilonmax/docker-for-nodejs-developers:latest
 
 run:
-	docker run -d -t -P --name development \
+	docker run -d -P --name development \
 	--dns=8.8.8.8 \
-	-v "C:\Users\Alberto Mendoza\Workspace":/Workspace \
-	gorilonmax/docker-for-nodejs-developers tail -f /etc/dummy
+	-v C:\Users\Alberto\ Mendoza\Workspace:/Workspace \
+	gorilonmax/docker-for-nodejs-developers \
+	tail -f /etc/hosts
 
 stop:
 	docker stop development
@@ -18,3 +19,6 @@ rm:
 
 terminal:
 	docker exec -i -t development /bin/bash
+
+logs:
+	docker logs development
