@@ -12,6 +12,7 @@ run:
 	-v C:\Users\albmendo\.ssh:/home/developer/.ssh \
 	-e GIT_PROMPT_ONLY_IN_REPO=1 \
 	-e TERM=xterm-256color \
+	-u developer \
 	gorilonmax/docker-for-nodejs-developers \
 	redis-server
 
