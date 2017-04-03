@@ -37,6 +37,8 @@ RUN chown -R developer:developer /home/developer
 
 ## config
 
+RUN mkdir -p /usr/local/etc/config
+
 WORKDIR /home/developer
 USER developer
 

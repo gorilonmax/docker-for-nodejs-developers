@@ -7,9 +7,11 @@ delete:
 
 run:
 	docker run -d -p 8081-8099:8081-8099 -p 8000-8002:8000-8002 --name development \
+	--dns=10.16.1.20 \
 	--dns=8.8.8.8 \
 	-v C:\Users\albmendo\Workspace:/Workspace \
 	-v C:\Users\albmendo\.ssh:/home/developer/.ssh \
+	-v C:\usr\local\etc\config:/usr/local/etc/config \
 	-e GIT_PROMPT_ONLY_IN_REPO=1 \
 	-e TERM=xterm-256color \
 	-u developer \
