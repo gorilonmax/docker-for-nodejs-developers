@@ -8,6 +8,8 @@ RUN apt-get install -y tmux
 RUN apt-get install -y git
 RUN apt-get install -y less
 RUN apt-get install -y tcl
+RUN apt-get install -y netstat-nat
+RUN apt-get install -y net-tools
 
 # redis
 
@@ -51,7 +53,7 @@ RUN mkdir .ssh
 
 ## vim
 
-RUN echo "set compatible" > .vimrc
+RUN echo "set nocompatible" > .vimrc
 
 ## git
 
@@ -62,6 +64,7 @@ RUN git config --global user.name "Alberto Mendoza"
 
 WORKDIR /Workspace
 USER root
+
 # network
 
 EXPOSE 8000 8001 8002 8080 8081 8082 8083 8084 8085 8086 8087 8088 8089 8090 8091 8092 8093 8094 8095 8096 8096 8097 8098 8099

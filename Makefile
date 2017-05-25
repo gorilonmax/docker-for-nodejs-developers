@@ -2,6 +2,7 @@ build:
 	docker build -t gorilonmax/docker-for-nodejs-developers:1.0.0 -t gorilonmax/docker-for-nodejs-developers:latest .
 
 rebuild: stop rm delete build
+
 delete:
 	docker rmi gorilonmax/docker-for-nodejs-developers:latest
 
