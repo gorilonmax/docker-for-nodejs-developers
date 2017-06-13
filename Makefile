@@ -11,11 +11,11 @@ run:
 	--dns=10.16.1.20 \
 	--dns=8.8.8.8 \
 	-v C:\Users\albmendo\Workspace:/Workspace \
-	-v C:\Users\albmendo\.ssh:/home/developer/.ssh \
+	-v C:\Users\albmendo\.ssh:/home/ubuntu/.ssh \
 	-v C:\usr\local\etc\config:/usr/local/etc/config \
-	-e GIT_PROMPT_ONLY_IN_REPO=1 \
+	-e GIT_PROMPT_ONLY_IN_REPO=0 \
 	-e TERM=xterm-256color \
-	-u developer \
+	-u ubuntu \
 	gorilonmax/docker-for-nodejs-developers \
 	redis-server
 
